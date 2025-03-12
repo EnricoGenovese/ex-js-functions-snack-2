@@ -4,16 +4,22 @@
 
 function creaContatoreAutomatico(ms) {
     let counter = 0;
-    let interval = setInterval(() => {
-        console.log(counter);
-        counter++
-        if (counter > 10) {
-            clearInterval(interval);
-            setTimeout(() => {
-                console.log('Interval cleared');
-            }, ms)
-        }
-    }, ms)
+    return () => {
+        let interval = setInterval(() => {
+            counter++
+            console.log(counter);
+            if (counter > 10) {
+                clearInterval(interval);
+                setTimeout(() => {
+                    console.log('Interval cleared');
+                }, ms)
+            }
+        }, ms)
+    }
 };
 
-creaContatoreAutomatico(1000);
+const fasterCountToTen = creaContatoreAutomatico(500);
+const countToTen = creaContatoreAutomatico(1000);
+
+fasterCountToTen();
+countToTen();

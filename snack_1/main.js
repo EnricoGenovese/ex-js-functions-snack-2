@@ -5,10 +5,9 @@
 function somma(num1, num2) {
     return num1 + num2;
 };
+console.log(somma(3, 4))
 
 // 2. Definisci la stessa funzione somma ma come funzione anonima assegnata a una variabile
-
-console.log(somma(3, 4))
 
 const somma = (num1, num2) => {
     return num1 + num2;

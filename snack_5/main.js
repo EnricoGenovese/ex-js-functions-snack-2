@@ -4,7 +4,7 @@
 
 // Nota: Questa funzione creerà un loop infinito. Interrompilo manualmente o usa clearInterval() in un altro script.
 
-function sendEverySecond(message) {
+function stampaOgniSecondo(message) {
     let counter = 0;
     const interval = setInterval(() => {
         console.log(message);
@@ -16,4 +16,4 @@ function sendEverySecond(message) {
 
 };
 
-sendEverySecond('Hello there!');
+stampaOgniSecondo('Hello there!');
